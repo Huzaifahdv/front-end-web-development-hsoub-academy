@@ -1,0 +1,58 @@
+.card:hover{
+    transform: translateY(0%);
+}
+
+.watch-page .watch-icons{
+    position: absolute; /* وضع الأيقونات بأسفل الفيديو */
+    bottom: 5px;
+}
+.watch-page .watch-icons:hover{
+    cursor: pointer;
+}
+.watch-page #more{
+    display: none;
+}
+
+.form-control:focus{
+    box-shadow: none;
+}
+
+.card-inner{
+    display: none;
+}
+.public-comment .card .btn{
+    background-color: #921192;
+    border-color: #921192;
+    color: #fff;
+}
+.public-comment .card .btn:hover{
+    background-color: #b915b9;
+}
+time{
+    left: 15px;
+    bottom: 1px !important;
+}
+.watch-page .fa-play{
+    right: 46% !important;
+}
+/* div.dropdown-menu.show{
+    inset: 0px 105px auto auto !important;
+} */
+@media (min-width: 992px) {
+    time{
+        font-size: 13px;
+    }
+    .fa-play{
+        font-size: 20px !important;
+    }
+}
+@media (max-width: 1047px) {
+    #myBtn{
+        margin-bottom: 60px !important;
+    }
+}
+@media (max-width: 553px) {
+    .reply-time{
+        font-size: 10px;
+    }
+}

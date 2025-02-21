@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+    <script>
+        $(function () {
+            $('input[name=miau]').val("hsoub academy");
+            $('p').parent('#miau').css('backgroundColor', 'beige');
+            $('#miau').children('p').css('color','orange');
+            $('#content').append('<p>Hi🤗, How are you? </p>');
+            $('<p>test 1</p>').prependTo('#content');
+            $('<h6>hmmmmm😒</h6>').appendTo('#content');
+            $('#content').before('<p>---------------</p>');
+            $('#content').after('<p>---------------</p>');
+            $('#content').children('h6').remove();
+            $('#content').click(function(){
+                alert('You clicked on the div 2')
+            });
+            $('#txtName').focus(function(){
+                $(this).addClass('inputStyle');
+            })
+            $('#selectBtn').click(function(){
+                $('input:checkbox').attr('checked','checked');
+                $(this).attr('disabled','disabled');
+            })
+            $('#deselectBtn').click(function(){
+                $('input:checkbox').removeAttr('checked');
+            })
+            $('#languages').change(function(){
+                alert($(this).val());
+            })
+            $('#goBottom').click(function(){
+                $('html, body').animate({ scrollTop: $(document).height()}, 200);
+                return false
+            })
+            $('#goTop').click(function(){
+                $('html, body').animate({scrollTop: 0 }, 200);
+                return false
+            })
+            // $(document).contextmenu(function(){ // إلغاء القائمة الجانبية في المتصفح
+            //     return false; 
+            // })
+            $('#slideToggle').click(function(){
+                $('#contet').slideToggle(500);
+            })
+            $('#myform').validate({
+                rules: {
+                    userName: {
+                        required: true
+                    },
+                    mail: {
+                        required: true
+                    },
+                    agree: {
+                        required: true
+                    }
+                }
+            });
+            $("#load").click(function(){
+                $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/todos',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data, status){
+                    var todos = '';
+                    $.each(data, function(key, value){
+                        todos += '<tr>';
+                        todos += '<td>' + value.id + '</td>';
+                        todos += '<td>' + value.userId + '</td>';
+                        todos += '<td>' + value.title + '</td>';
+                        todos += '<td>' + value.completed + '</td>';
+                        todos += '</tr>'
+                    });
+                    $('#todos').append(todos);
+                },
+                error: function(result, status, error){
+                    console.log('Cannot load date');
+                },
+                complete: function(result, status){
+                    console.log("loading completed!");
+                }
+                })
+            });
+        });
+    </script>
+    <style>
+        .inputStyle{
+            background-color: peru;
+            border: 1px solid black;
+        }
+        .error{
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subscription Form:</h1>
+    <form action="" id="myform">
+        <table>
+            <tr>
+                <td>
+                    <label for="userName">User Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="userName" id="userName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email: </label>
+                </td>
+                <td>
+                    <input type="text" name="mail" id="mail">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="agree" id="agree">
+                    <label for="agree">I agree to the terms and conditions</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+                <td>
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <div style="height: 400px;">
+        <a href="#" id="goBottom">انزل تحت</a>
+    </div>
+    <form action="">
+        <input type="text" name="miau" id="txtName">
+    </form>
+    <div id="miau">
+        <h4>div 1</h4>
+        <p>This is a paragraph</p>
+    </div>
+    <div id="content">
+        <h4>div 2</h4>
+    </div>
+    <form action="">
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" name="" id="css">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" name="" id="JavaScript">
+        <label for="JavaScript">JavaScript</label><br>
+        <input type="checkbox" name="" id="jQuery">
+        <label for="jQuery">jQuery</label><br>
+        <hr>
+        <select name="languages" id="languages">
+            <option value="java">Java</option>
+            <option value="c#">C#</option>
+            <option value="php">PHP</option>
+            <option value="VB">Visual Basic</option>
+        </select>
+        <br><br>
+        <input type="button" value="Select All" id="selectBtn">
+        <input type="button" value="Deselect all" id="deselectBtn">
+    </form>
+    <hr>
+    <div id="bottom" style="height: 400px;">
+        <a href="#" id="goTop">رح فوق</a>
+    </div>
+    <div id="contet" style="height: 200px; width: 200px; background-color: bisque;">
+        <h5>hi hi hi hi</h5><p>خمبلة يادافع البلااااااااا</p>
+    </div>
+    <button id="slideToggle">Slide Up / Slide Down</button>
+    <hr>
+    <button id="load">Load Date</button>
+    <table border="1" id="todos">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UserId</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* الدرس الثاني : المحددات */
+/* h1{
+    color: gold;
+    background: red;
+}
+#title{
+    background-color: aqua;
+}
+.miau{
+    background: black
+} */
+/* الدرس الثالث : المحددات الفرعية */
+/* h1#title{
+    color: blueviolet;
+}
+h1.miau{
+    color: red;
+}
+div > h1{
+    color: red;
+    background:black;
+}
+input[type="password"]{
+    border: 2px solid orange;
+}
+h1{
+    color: blue;
+    background-color: peachpuff;
+}
+input{
+    border: 2px solid black;
+}
+input[type="password"]{
+    background-color: aqua;
+    border: 2px solid black;
+} */
+/* الدرس الرابع : التعامل مع الألوان*/
+/* h1{
+    color: blue;
+    background-color: yellow;
+}
+h1{
+    color: #0011ff;
+    background-color: #ff0000;
+}
+h1{
+    color: rgb(12, 87, 145);
+    background-color: rgba(67, 4, 94, 0.5);
+} */
+/*الدرس الخامس : مع الخطوط */
+/* h1{
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100pt;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-style: italic;
+} */
+/* الدرس السادس : التعامل مع النصوص */
+/* h1{
+    color: teal;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 5px 5px 5px gray;
+    text-indent: 3cm;
+    direction: ltr;
+} */
+/* الدرس السابع : التعامل مع الخلفية */
+/* .content{
+    text-transform: capitalize;
+    text-align: center;
+    color: black;
+    background-image: url(images/software-developer-6521720_640.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 1000px;
+} */
+/* الدرس الثامن : الروابط والأصناف الزائفة */
+/* a:link{
+    color: orangered;
+    text-decoration: underline;
+    background-color: papayawhip;
+}
+a:visited{
+    color: purple;
+    text-decoration: underline;
+}
+a:hover{
+    color: palegoldenrod;
+    text-decoration: underline;
+    background-color: plum;
+}
+a:active{
+    color: coral;
+} /* الترتيب مهم جدّا هنا */
+/* الدرس التاسع : النموذج الصندوقي */
+/* .content{
+    border: 2px solid blue;
+    color: cornflowerblue;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+} */
+/* الدرس العاشر : الهوامش والحواشي*/
+/* .content{
+    width: 200px;
+    height: 200px;
+    background-color: darkmagenta;
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+.first{
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+}
+
+.last{
+    width: 200px;
+    height: 200px;
+    background-color: indianred;
+} */
+/* الدرس الحادي عشر : التعامل مع القوائم */
+/* ol{list-style-type: upper-alpha;}
+ul{
+    list-style-type: square;
+} */
+/* الدرس الثاني عشر : التعامل مع الجداول */
+/* table td , th{
+    border: 1px solid grey;
+    padding: 15px;
+
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: lightcyan;
+    color: mediumslateblue;
+} */
+/* الدرس الثالث عشر : التعامل مع النماذج */
+/* form{
+    background-color: rgb(214, 221, 235);
+    padding: 20px;
+    width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 35px;
+    margin: 20px;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 15px;
+}
+label{
+    color: rgb(114, 113, 113);
+}
+input[type="text"], input[type="password"]{
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 10px;
+    height: 35px;
+    width: 100%;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 35px;
+    margin-top: 15px;
+    background-color: rgb(24, 135, 209);
+    border: 1px solid rgb(98, 106, 175);
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+} */
+/* الدرس الرابع عشر : تحديد المواضع */
+/* .post{
+    display: inline-block;
+    height: 400px;
+    width: 180px;
+    border: 1px solid gray;
+    background-color: lavender;
+}
+.post:last-child{
+    position:relative ;
+    left: 40px;
+    top: 60px;
+} */
+/* Felx Box الدرس الخامس عشر : تخطيط */
+/* .container > div{
+    background-color: #49927a;
+    width: 400px;
+    margin: 20px;
+    font-size: 40px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+} */
+/* Display modes الدرس السادس عشر : طرق العرض */
+/* .content{
+    background-color: indianred;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+nav{
+    float: left;
+    width: 200px;
+}
+.clear{
+    clear: both;
+} */
+/* الدرس السابع عشر : التعامل مع خطوط الويب */
+/* @font-face {
+    font-family: cairoFont;
+    src: url(fonts/Cairo/Cairo-Bold.ttf);
+}
+
+h1{
+    font-family: cairoFont;
+} */
+/* الدرس الثامن عشر : التعامل مع الأيقونات */
+
