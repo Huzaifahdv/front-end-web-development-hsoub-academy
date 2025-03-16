@@ -1,0 +1,25 @@
+@import "config/variables.scss";
+@import "config/layout.scss";
+@import "config/colors.scss";
+
+@import "utilities/spacing.scss";
+@import "utilities/mixin-card.scss";
+
+@import "base/fonts.scss";
+@import "base/global.scss";
+@import "base/typography.scss";
+@import "base/links.scss";
+
+@import "components/demo.scss";
+@import "components/components";
+
+@import "pages/index.scss";
+@import "pages/single-page.scss";
+
+@import "hacks/add-product.scss";
+
+$background-color: silver;
+
+body {
+    background-color: #F4F4F4;
+}

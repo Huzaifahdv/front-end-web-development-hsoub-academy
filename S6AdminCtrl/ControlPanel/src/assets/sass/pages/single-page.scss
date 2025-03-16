@@ -1,0 +1,45 @@
+.page-header {
+    display: flex;
+    margin: spacing('wide') 0;
+    align-items: baseline;
+
+    & .c-btn {
+        margin: 0 spacing();
+    }
+
+    & .c-btn:first-of-type {
+        margin-right: spacing('wide');
+    }
+}
+
+@media (max-width: 411px) {
+    .page-header {
+      gap: 10px;
+  
+      & .page-title {
+        font-size: 1.2em;
+      }
+  
+      & .c-btn:first-of-type {
+        margin-right: 0;
+      }
+    }
+    .c-btn {
+      font-size: 10px;
+    }
+    .c-table__header {
+      padding: 0 6px;
+    }
+  
+    .c-table__navigation__arrows {
+      margin-right: 5px;
+    }
+  
+    .c-table__title {
+      font-size: 17px;
+    }
+  
+    .c-table__footer {
+      padding-left: 5px;
+    }
+}
